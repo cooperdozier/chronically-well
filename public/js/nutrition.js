@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 foodCard.classList.add('content-card');
 
                 foodCard.innerHTML = `
-                    <h3>${food.food_name}</h3>
+                    <h3 class="food-name">${food.food_name.toUpperCase()}</h3>
                     <p>Calories: ${food.nf_calories}</p>
                     <p>Protein: ${food.nf_protein}g</p>
                     <p>Carbohydrates: ${food.nf_total_carbohydrate}g</p>
@@ -60,4 +60,4 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayErrorMessage(message) {
         nutritionResults.innerHTML = `<p class="error-message">${message}</p>`;
     }
-}); 
+});
